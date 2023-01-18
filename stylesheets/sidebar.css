@@ -1,0 +1,41 @@
+/*This stylesheet is for styling side-bar*/
+
+/*Side-bar(container)*/
+.side-bar{
+    position: fixed;
+    top:56px;
+    left:0;
+    bottom:0;
+    background-color: white;
+    text-align: center;
+    width:65px;
+    padding:0px 0px;
+    padding-left:3px;
+    z-index: 4;
+}
+
+/*Side-bar-divisons */
+.side-bar-div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+    justify-content: center;
+    align-items: center;
+    font-size:11px;
+    padding:16px;
+    padding-left:15px;
+    padding-bottom:10px;
+    border-radius: 10px;
+}
+
+/*side-bar-logos*/
+.side-bar img{
+    height:24px;
+}
+
+/*Hovers*/
+.side-bar-div:hover{
+    background-color: rgb(245, 241, 241);    
+    cursor: pointer;
+}

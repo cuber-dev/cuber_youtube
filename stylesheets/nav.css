@@ -1,0 +1,177 @@
+/*------------------Navigation Bar-------------------------*/
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    height: 56px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    background-color: white;
+    border-bottom:1px solid rgb(236, 232, 232);
+    z-index:3;
+    
+}
+
+/*-------------------First section-------------------------*/
+.first{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+}
+.hamburger-menu{
+    height: 22px;
+    margin:0px 24px;
+}
+.youtube-logo{
+    height: 20px;
+}
+/*-------------------------------------------------------*/
+
+/*------------------Middle section--------------------*/
+.middle{
+    flex:1;
+    height: 56px;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+}
+.search-bar{
+    height:40px;
+    border:1px solid rgba(96,96,96,0.30);
+    margin: 0px;
+    flex: 1;
+    width: 0px;
+    max-width: 400px;
+    padding-left: 12px;
+    font-size: 16px;
+    border-radius: 1px;
+}
+.image-box1{
+    height: 42px;
+    border:1px solid rgba(96,96,96,0.30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0px 8px;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.search-logo{
+    height: 28px;
+    width: 28px;
+    margin:0;
+}
+.image-box2{
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.voice-logo{
+    height:28px;
+    border-radius: 22px;  
+}
+/*-----------------------------------------------*/
+
+/*----------------Last section-----------------*/
+.last{
+    width:200px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px;
+}
+.upload-logo{
+    height: 28px;
+}
+.notification-logo{
+    height: 28px;
+}
+.notification-count{
+    position: absolute;
+    font-size: 10px;
+    background-color: red;
+    padding:4px 7px 4px 7px;
+    border-radius: 20px;
+    top:-1px;
+    right:-12px;
+    color: white;
+}
+.apps-logo{
+    height: 28px;
+}
+.profile{
+    height: 35px;
+    border-radius: 50%;
+}
+.tooltip{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+/*---------------------------------------------*/
+
+/*-------------hover-caption--------------*/
+/*for middle-section*/
+.image-box1 .caption,
+.image-box2 .caption{
+    position: absolute;
+    background-color: rgb(105, 100, 100);
+    color: white;
+    opacity: 0;
+    font-size: 12px;
+    padding:5px 10px;
+    bottom:-30px;
+    pointer-events: none;
+    white-space:nowrap;
+    border-radius: 3px;
+    transition: opacity 0.15s;
+}
+/*for last section*/
+.tooltip .tooltip-caption{
+    position: absolute;
+    background-color: rgb(105, 100, 100);
+    color: white;
+    opacity: 0;
+    font-size: 12px;
+    padding:5px 10px;
+    bottom:-40px;
+    pointer-events: none;
+    white-space:nowrap;
+    border-radius: 3px;
+    transition: opacity 0.15s;
+} 
+/*-----------------------------------------*/
+
+/*------------Hover section*--------------*/
+/*for-all-images*/
+.nav-bar img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+/*for middle-section*/
+.image-box1:hover .caption,
+.image-box2:hover .caption{
+    opacity: 1;
+}
+/*for last-section*/
+.tooltip:hover .tooltip-caption{
+    opacity: 1;
+}
+/*--------------------------------------*/
