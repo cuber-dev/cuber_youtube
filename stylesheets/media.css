@@ -26,6 +26,7 @@
     }
     .image-box1:active .search-bar{
         width:100%;
+        z-index:3;
     }
     .last{
       width:170px;
