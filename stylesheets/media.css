@@ -1,8 +1,54 @@
 /*--------------From 500px to 600px------------------*/
-@media(min-width:500px) and (max-width:600px){
+@media (max-width:600px){
+    body{
+      padding-left: 45px;
+    }
     .video-grid{
         grid-template-columns:1fr;
         row-gap: 90px;
+    }
+    .first{
+      position: relative;
+      margin: 0px 3px;
+    }
+    .hamburger-menu{
+      position: absolute;
+      height: 0px;
+      opacity: 0;
+      margin:0px 0px;
+    }
+    .youtube-logo{
+        height: 20px;
+        
+    }
+    .middle{
+      margin:0px 3px;
+    }
+    .last{
+      width:170px;
+      margin:0px 2px;
+    }
+    .side-bar{
+      top:auto;
+      bottom:0;
+      left:0;
+      right:0;
+      width:auto;
+      position: fixed;
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      z-index: 4;
+    }
+    .side-bar-div{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size:11px;
+      border-radius: 10px;
     }
 }
 /*---------------------------------------------------*/
