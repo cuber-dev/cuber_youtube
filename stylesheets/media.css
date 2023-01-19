@@ -24,6 +24,9 @@
     .middle{
       margin:0px 3px;
     }
+    .image-box1:active .search-bar{
+        width:100%;
+    }
     .last{
       width:170px;
       margin:0px 2px;
