@@ -1,7 +1,8 @@
 /*--------------From 500px to 600px------------------*/
 @media (max-width:600px){
     body{
-      padding-left: 45px;
+      padding-left: 40px;
+      padding-bottom:100px;
     }
     .video-grid{
         grid-template-columns:1fr;
@@ -25,7 +26,11 @@
       margin:0px 3px;
     }
     .image-box1:active .search-bar{
-        width:100%;
+        width:120px;
+        z-index:3;
+    }
+    .search-bar:focus{
+        width:120px;
         z-index:3;
     }
     .last{
