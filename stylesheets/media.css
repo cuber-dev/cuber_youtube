@@ -50,7 +50,7 @@
       background-color: white;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       z-index: 4;
     }
     .side-bar-div{
@@ -61,6 +61,7 @@
       align-items: center;
       font-size:11px;
       border-radius: 10px;
+      padding:2px 8px;
     }
 }
 /*---------------------------------------------------*/
