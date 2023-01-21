@@ -50,7 +50,7 @@
       background-color: white;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       z-index: 4;
     }
     .side-bar-div{
