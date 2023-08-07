@@ -1,0 +1,133 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "kind": 6,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "class Product(BaseModel):\n    name : str\n    price :  int\n@app.post(\"/product/{id}\")\ndef create_product(id: int, new_product: Product):\n    if id in products:\n        return 'already exists'\n    products[id] = new_product\n    return {\n        \"success\": \"added new product\",",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "Update",
+        "kind": 6,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "class Update(BaseModel):\n    name : Optional[str] = None\n    price :  Optional[int] = None\n@app.put(\"/product/{id}\")\ndef update_product(id: int, update_product: Update):\n    if id not in products:\n        return 'not found'\n    for key , value in products.items():\n        if key == id:\n            if update_product.name != None:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def root():\n    return {\"message\": \"Hello World\"}\nproducts = {\n    1: {\n        \"name\": \"bottle\",\n        \"price\": 50\n    },\n    2: {\n        \"name\": \"pen\",\n        \"price\": 10",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_products",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_all_products():\n    return products\n@app.get(\"/product-name\")\ndef get_products_name(n : str,p : int = None):\n    for id, info in products.items():\n        # for checking name \n        if type(info['name']) == str:\n            if info['name'] == n:\n                return info\n        # for checking price",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "get_products_name",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_products_name(n : str,p : int = None):\n    for id, info in products.items():\n        # for checking name \n        if type(info['name']) == str:\n            if info['name'] == n:\n                return info\n        # for checking price\n        if type(info['price']) == int:\n            if info['price'] == p:\n                return info",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "get_product_name",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_product_name(id: int):\n    return products[id] if id in products else 'not found'\nclass Product(BaseModel):\n    name : str\n    price :  int\n@app.post(\"/product/{id}\")\ndef create_product(id: int, new_product: Product):\n    if id in products:\n        return 'already exists'\n    products[id] = new_product",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "create_product",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def create_product(id: int, new_product: Product):\n    if id in products:\n        return 'already exists'\n    products[id] = new_product\n    return {\n        \"success\": \"added new product\",\n        \"new_product\": products[id]\n    }\nclass Update(BaseModel):\n    name : Optional[str] = None",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "update_product",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def update_product(id: int, update_product: Update):\n    if id not in products:\n        return 'not found'\n    for key , value in products.items():\n        if key == id:\n            if update_product.name != None:\n                value['name'] = update_product.name\n            if update_product.price != None:\n                value['price'] = update_product.price\n            products[id] = value",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "delete_product",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def delete_product(id: int):\n    if id not in products:\n        return 'not found'\n    deleted_product = products.pop(id)\n    return {\n        \"success\": \"deleted product\",\n        \"deleted-product\": deleted_product\n    }",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/\")\ndef root():\n    return {\"message\": \"Hello World\"}\nproducts = {\n    1: {\n        \"name\": \"bottle\",\n        \"price\": 50\n    },\n    2: {",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "products",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "products = {\n    1: {\n        \"name\": \"bottle\",\n        \"price\": 50\n    },\n    2: {\n        \"name\": \"pen\",\n        \"price\": 10\n    },\n    3: {",
+        "detail": "app",
+        "documentation": {}
+    }
+]
